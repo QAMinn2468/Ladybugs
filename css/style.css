@@ -1,3 +1,10 @@
 body {
     text-align: center;
+    background-color: lightgoldenrodyellow;
+    font-family: 'Boogaloo', cursive;
+}
+
+ul {
+  display: inline;
+  list-style: none;
 }
