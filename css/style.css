@@ -1,10 +1,15 @@
 body {
     text-align: center;
-    background-color: lightgoldenrodyellow;
+    background-color: burlywood;                   /* A11y - color contrast vs black = 11.31:1   consider lemonchiffon as well (A11y - color contrast vs black = 19.81 : 1)  */
     font-family: 'Boogaloo', cursive;
+    margin: 0 0;
 }
 
 ul {
   display: inline;
   list-style: none;
+}
+
+canvas {
+  /* box-shadow: 0 5px 5px 5px lightgray;                                       FIX - just not right*/
 }
