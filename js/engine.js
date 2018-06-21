@@ -34,10 +34,10 @@ var Engine = (function(global) {
     }
 
     function updateEntities(dt) {
-        // allEnemies.forEach(function(enemy) {                                
-        //     enemy.update(dt);
-        // });
-        // player.update();
+        allEnemies.forEach(function(enemy) {                                
+            enemy.update(dt);
+        });
+        player.update();
     }
 
     function render() {

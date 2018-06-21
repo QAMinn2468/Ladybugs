@@ -4,9 +4,11 @@ class Entity {
     this.x = 2;
     this.y = 5;
   }
-  // update(){
-  //
-  // }
+  update(dt){
+    this.isOutOfBoundsX = this.x > 5;
+    this.isOutOfBoundsY = this.y < 1;
+
+  }
 
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);       //  Adjusted vertical placement of entities. - more centered in the squares.
@@ -33,5 +35,13 @@ class Enemy extends Entity {
     this.x = x;
     this.y = y;
     // changePace();
+  }
+  update(dt) {
+    super.update();
+    if(this.isOutOfBoundsX){
+      this.x = -1;
+    } else {
+      this.x += dt;
+    }
   }
 }
