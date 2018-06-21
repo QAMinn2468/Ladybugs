@@ -10,15 +10,11 @@ var Engine = (function(global) {
     doc.body.appendChild(canvas);
 
     function main() {
-
         var now = Date.now(),
             dt = (now - lastTime) / 1000.0;
-
         update(dt);
         render();
-
         lastTime = now;
-
         win.requestAnimationFrame(main);
     }
 
@@ -30,18 +26,17 @@ var Engine = (function(global) {
 
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();                                                   note
+        // checkCollisions();                                       // TODO: check for checkCollision
     }
 
     function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {                                
+        allEnemies.forEach(function(enemy) {                                    // WORKS - Ladybugs move
             enemy.update(dt);
         });
         player.update();
     }
 
     function render() {
-
         var rowImages = [
                 'images/water-block.png',   // Top row is water
                 'images/stone-block.png',   // Row 1 of 4 of stone

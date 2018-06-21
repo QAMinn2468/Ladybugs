@@ -23,9 +23,29 @@ class Player extends Entity {
   constructor() {
     super();
     this.sprite += 'char-cat-girl.png';
-    // handleInput();
-    // checkWin();
   }
+    handleInput(input) {
+      switch (input) {
+        case 'left':                                                            // Left WORKS
+          this.x = this.x > 0 ? this.x - 1 : this.x;
+          break;
+        case 'up':
+          this.y = this.y > 0 ? this.y - 1 : this.y;
+          break;
+        case 'right':
+          this.x = this.x < 4 ? this.x + 1 : this.x;                            // Right WORKS
+          break;
+        case 'down':
+          this.y = this.y < 5 ? this.y + 1 : this.y;
+          break;
+        default:
+          break;
+      }
+    }
+    // this.moving = true;
+
+    // checkWin();
+
 }
 
 class Enemy extends Entity {
@@ -34,12 +54,12 @@ class Enemy extends Entity {
     this.sprite += 'enemy-bug.png';
     this.x = x;
     this.y = y;
-    // changePace();
+    // changePace();                                 // TODO:  change speed of bugs
   }
   update(dt) {
     super.update();
     if(this.isOutOfBoundsX){
-      this.x = -1;
+      this.x = -1;                                                              // WORKS - wraps ladybugs around to other side.
     } else {
       this.x += dt;
     }
