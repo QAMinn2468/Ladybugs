@@ -9,7 +9,7 @@ class Entity {
   // }
 
   render() {
-    ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
+    ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);       //  Adjusted vertical placement of entities. - more centered in the squares.
   }
 
   // checkCollision() {

@@ -34,7 +34,7 @@ var Engine = (function(global) {
     }
 
     function updateEntities(dt) {
-        // allEnemies.forEach(function(enemy) {                                 note
+        // allEnemies.forEach(function(enemy) {                                
         //     enemy.update(dt);
         // });
         // player.update();
@@ -44,11 +44,11 @@ var Engine = (function(global) {
 
         var rowImages = [
                 'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/stone-block.png',   // Row 1 of 4 of stone
+                'images/stone-block.png',   // Row 2 of 4 of stone
+                'images/stone-block.png',   // Row 3 of 4 of stone
+                'images/stone-block.png',   // Row 4 of 4 of stone              // WORKS - changed row of grass to row of stone and added bug.
+                'images/grass-block.png'    // Row 1 of 1 of grass
             ],
             numRows = 6,
             numCols = 5,
@@ -60,7 +60,7 @@ var Engine = (function(global) {
         for (row = 0; row < numRows; row++) {
             for (col = 0; col < numCols; col++) {
 
-                ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
+                ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 81);    // WORKS! - do not touch!
             }
         }
 
@@ -68,12 +68,11 @@ var Engine = (function(global) {
     }
 
     function renderEntities() {
+        allEnemies.forEach(function(enemy) {
+            enemy.render();                                                     // WORKS! - Ladybugs shown on screen
+        });
 
-        // allEnemies.forEach(function(enemy) {
-        //     enemy.render();
-        // });
-        
-        player.render();
+        player.render();                                                        // WORKS! - player shows on screen
     }
 
 
