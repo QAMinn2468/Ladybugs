@@ -26,8 +26,18 @@ var Engine = (function(global) {
 
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();                                       // TODO: check for checkCollision
+        checkCollisions();
+        }                                       // TODO: check for checkCollision
+
+    function checkCollisions() {
+      allEnemies.forEach(enemy => {
+        if(enemy.checkCollisions(player) || player.checkCollisions(enemy)) {  // TODO: fix no collision
+          player.x = 2;
+          player.y = 5;
+        }
+      })
     }
+
 
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {                                    // WORKS - Ladybugs move

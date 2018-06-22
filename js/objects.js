@@ -4,19 +4,25 @@ class Entity {
     this.x = 2;
     this.y = 5;
   }
-  update(dt){
-    this.isOutOfBoundsX = this.x > 5;
-    this.isOutOfBoundsY = this.y < 1;
 
+  update(dt){
+    this.isOutOfBoundsX = this.x > 5;                                           // WORKS - player stays in bounds
+    this.isOutOfBoundsY = this.y < 1;
   }
 
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);       //  Adjusted vertical placement of entities. - more centered in the squares.
   }
 
-  // checkCollision() {
-  //
-  // }
+  checkCollisions(playerOrEnemy) {
+    if (this.y === playerOrEnemy.y) {
+      if (this.x >= playerOrEnemy.x - 0.5 && this.x <= (playerOrEnemy.x + 0.5)) {  // TODO: seems fine.   No collision!!
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
 };
 
 class Player extends Entity {
@@ -26,17 +32,17 @@ class Player extends Entity {
   }
     handleInput(input) {
       switch (input) {
-        case 'left':                                                            // Left WORKS
-          this.x = this.x > 0 ? this.x - 1 : this.x;
+        case 'left':
+          this.x = this.x > 0 ? this.x - 1 : this.x;                            // Left WORKS
           break;
         case 'up':
-          this.y = this.y > 0 ? this.y - 1 : this.y;
+          this.y = this.y > 0 ? this.y - 1 : this.y;                            // Up WORKS
           break;
         case 'right':
           this.x = this.x < 4 ? this.x + 1 : this.x;                            // Right WORKS
           break;
         case 'down':
-          this.y = this.y < 5 ? this.y + 1 : this.y;
+          this.y = this.y < 5 ? this.y + 1 : this.y;                            // Down WORKS
           break;
         default:
           break;
