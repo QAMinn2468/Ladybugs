@@ -4,7 +4,7 @@ var Engine = (function(global) {
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
         lastTime;
-    life = 3;
+    life = 3;                                                                   // WORKS!  life starts at 3.
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
@@ -32,8 +32,8 @@ var Engine = (function(global) {
     function checkCollisions() {
       allEnemies.forEach(enemy => {
         if(enemy.checkCollisions(player) || player.checkCollisions(enemy)) {    // WORKS Collision!
-          life = life - 1;
-          console.log(life);   // TODO: did not print!!
+          life = life - 1;                                                      // WORKS Life decreased by one!
+          console.log(life);   // TODO:
           player.x = 2;
           player.y = 5;
         }
