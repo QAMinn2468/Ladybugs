@@ -16,7 +16,7 @@ class Entity {
 
   checkCollisions(playerOrEnemy) {
     if (this.y === playerOrEnemy.y) {
-      if (this.x >= playerOrEnemy.x - 0.5 && this.x <= (playerOrEnemy.x + 0.5)) {  // TODO: seems fine.   No collision!!
+      if (this.x >= playerOrEnemy.x - 0.5 && this.x <= (playerOrEnemy.x + 0.5)) {  // WORKS fine.   Collision!!
         return true;
       } else {
         return false;

@@ -3,6 +3,10 @@
 *******************************************************************/
 const player = new Player();
 const allEnemies = [...Array(4)].map((_, i)=> new Enemy(0, i+1));               // adjusts number of ladybugs
+let life = document.querySelector('.life');                                     
+
+
+
 
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {

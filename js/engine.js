@@ -4,7 +4,7 @@ var Engine = (function(global) {
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
         lastTime;
-
+    life = 3;
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
@@ -27,11 +27,13 @@ var Engine = (function(global) {
     function update(dt) {
         updateEntities(dt);
         checkCollisions();
-        }                                       // TODO: check for checkCollision
+      }                                                                         // WORKS Collision!!
 
     function checkCollisions() {
       allEnemies.forEach(enemy => {
-        if(enemy.checkCollisions(player) || player.checkCollisions(enemy)) {  // TODO: fix no collision
+        if(enemy.checkCollisions(player) || player.checkCollisions(enemy)) {    // WORKS Collision!
+          life = life - 1;
+          console.log(life);   // TODO: did not print!!
           player.x = 2;
           player.y = 5;
         }
