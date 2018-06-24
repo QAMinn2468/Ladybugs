@@ -34,6 +34,7 @@ var Engine = (function(global) {
         if(enemy.checkCollisions(player) || player.checkCollisions(enemy)) {    // WORKS Collision!
           life = life - 1;                                                      // WORKS Life decreased by one!
           console.log(life);
+          updateLifeCounter();
           player.x = 2;
           player.y = 5;
         }
