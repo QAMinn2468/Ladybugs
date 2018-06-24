@@ -60,7 +60,28 @@ class Enemy extends Entity {
     this.sprite += 'enemy-bug.png';
     this.x = x;
     this.y = y;
-    // changePace();                                 // TODO:  change speed of bugs
+    // changePace() {
+    //   switch(this.y) {
+    //     case 1:
+    //       this.x += 2 * dt;
+    //       break;
+    //
+    //     case 2:
+    //       this.x += 1.5 * dt;
+    //       break;
+    //
+    //     case 3:
+    //       this.x += 1.25 * dt;
+    //       break;
+    //
+    //     case 4:
+    //       this.x += 1.25;
+    //       break;
+    //
+    //     default:
+    //       break;
+    //   }
+    // }                                 // TODO:  change speed of bugs
   }
   update(dt) {
     super.update();

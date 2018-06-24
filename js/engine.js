@@ -33,7 +33,7 @@ var Engine = (function(global) {
       allEnemies.forEach(enemy => {
         if(enemy.checkCollisions(player) || player.checkCollisions(enemy)) {    // WORKS Collision!
           life = life - 1;                                                      // WORKS Life decreased by one!
-          console.log(life);   // TODO:
+          console.log(life);
           player.x = 2;
           player.y = 5;
         }

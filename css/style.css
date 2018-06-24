@@ -1,7 +1,7 @@
 body {
     text-align: center;
-    background-color: burlywood;                   /* A11y - color contrast vs black = 11.31:1   consider lemonchiffon as well (A11y - color contrast vs black = 19.81 : 1)  */
-    font-family: 'Boogaloo', cursive;
+    background-image: linear-gradient(40deg, lemonchiffon, lightgreen);         /* consider lemonchiffon  (A11y - color contrast vs black = 19.81 : 1)  */
+    font-family: 'Boogaloo', cursive;                                           /* WORKS: lost font!! */
     margin: 0 0;
 }
 
@@ -10,6 +10,6 @@ ul {
   list-style: none;
 }
 
-canvas {
-  /* box-shadow: 0 5px 5px 5px lightgray;                                       FIX - just not right*/
+.scoreboard {
+  font-size: 1.25em;
 }
