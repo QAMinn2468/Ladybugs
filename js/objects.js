@@ -92,3 +92,17 @@ class Enemy extends Entity {
     }
   }
 }
+
+class Reward extends Entity {
+  constructor() {
+    super();
+    this.sprite += 'Heart.png';                                                 // WORKS - heart is shown  // TODO: fix z-index so ALL is over heart.
+    this.x = 2;
+    this.y = 1;
+
+  }
+
+  render() {
+    ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);       //  Adjusted vertical placement of entities. - more centered in the squares.
+  }
+}

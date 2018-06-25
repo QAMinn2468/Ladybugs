@@ -4,9 +4,10 @@
 const player = new Player();
 const allEnemies = [...Array(4)].map((_, i)=> new Enemy(0, i+1));               // adjusts number of ladybugs
 const lifeCounter = document.querySelector('.stars');
+const heart = new Reward();
 let life;
 
-function updateLifeCounter(Life){
+function updateLifeCounter(Life){                                               // WORKS
   lifeCounter.innerText = `${life}`
 }
 

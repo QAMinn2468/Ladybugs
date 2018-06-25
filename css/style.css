@@ -1,15 +1,12 @@
 body {
     text-align: center;
-    background-image: linear-gradient(40deg, lemonchiffon, lightgreen);         /* consider lemonchiffon  (A11y - color contrast vs black = 19.81 : 1)  */
+    background-image: ;         /* consider lemonchiffon  (A11y - color contrast vs black = 19.81 : 1)  */
     font-family: 'Boogaloo', cursive;                                           /* WORKS: lost font!! */
     margin: 0 0;
 }
 
-ul {
-  display: inline;
-  list-style: none;
-}
-
 .scoreboard {
   font-size: 1.25em;
+  display: inline block;
+  text-align: center;
 }

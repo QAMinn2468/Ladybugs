@@ -33,8 +33,7 @@ var Engine = (function(global) {
       allEnemies.forEach(enemy => {
         if(enemy.checkCollisions(player) || player.checkCollisions(enemy)) {    // WORKS Collision!
           life = life - 1;                                                      // WORKS Life decreased by one!
-          console.log(life);
-          updateLifeCounter();
+          updateLifeCounter();                                                  // WORKS lifeCounter is reduced
           player.x = 2;
           player.y = 5;
         }
@@ -81,6 +80,7 @@ var Engine = (function(global) {
         });
 
         player.render();                                                        // WORKS! - player shows on screen
+        heart.render();
     }
 
 
@@ -94,7 +94,7 @@ var Engine = (function(global) {
         'images/grass-block.png',
         'images/enemy-bug.png',
         'images/char-cat-girl.png',
-        'images/Star.png',
+        'images/Heart.png',
         'images/Gem Blue.png'
     ]);
     Resources.onReady(init);
