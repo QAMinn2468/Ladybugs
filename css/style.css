@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-image: ;         /* consider lemonchiffon  (A11y - color contrast vs black = 19.81 : 1)  */
+    background-color: lemonchiffon;         /* consider lemonchiffon  (A11y - color contrast vs black = 19.81 : 1)  */
     font-family: 'Boogaloo', cursive;                                           /* WORKS: lost font!! */
     margin: 0 0;
 }

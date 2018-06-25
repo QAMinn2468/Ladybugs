@@ -28,7 +28,7 @@ class Entity {
 class Player extends Entity {
   constructor() {
     super();
-    this.sprite += 'char-cat-girl.png';
+    this.sprite += 'char-boy-hat.png';
   }
     handleInput(input) {
       switch (input) {
@@ -103,6 +103,6 @@ class Reward extends Entity {
   }
 
   render() {
-    ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);      
+    ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);
   }
 }
