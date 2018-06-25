@@ -103,6 +103,6 @@ class Reward extends Entity {
   }
 
   render() {
-    ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);       //  Adjusted vertical placement of entities. - more centered in the squares.
+    ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);      
   }
 }
