@@ -6,10 +6,20 @@ const allEnemies = [...Array(4)].map((_, i)=> new Enemy(0, i+1));               
 const lifeCounter = document.querySelector('.stars');
 const heart = new Reward();
 let life;
+const scoreboard = document.querySelector('.scoreboard');
 
-function updateLifeCounter(Life){                                               // WORKS
-  lifeCounter.innerText = `${life}`
+function updateLifeCounter(Life) {                                              // WORKS
+  lifeCounter.innerText = `${life}`;
+  if (life === 0) {
+    lostAlert();
+  }
 }
+
+function lostAlert() {                                                          // WORKS function is called.
+  console.log('You Lost!');
+  alert('You Lost!');
+}
+
 
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
