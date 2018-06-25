@@ -25,9 +25,12 @@ var Engine = (function(global) {
     }
 
     function update(dt) {
+      if (player.y === 0) {
+        checkWin();
+      }
         updateEntities(dt);
         checkCollisions();
-      }                                                                         // WORKS Collision!!
+  }                                                                             // WORKS Collision!!
 
     function checkCollisions() {
       allEnemies.forEach(enemy => {
@@ -38,6 +41,10 @@ var Engine = (function(global) {
           player.y = 5;
         }
       })
+    }
+
+    function checkWin() {
+        wonAlert();
     }
 
 
@@ -63,14 +70,11 @@ var Engine = (function(global) {
 
         // Before drawing, clear existing canvas
         ctx.clearRect( 0, 0, canvas.width, canvas.height)
-
         for (row = 0; row < numRows; row++) {
             for (col = 0; col < numCols; col++) {
-
                 ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 81);    // WORKS! - do not touch!
             }
         }
-
         renderEntities();
     }
 
@@ -85,7 +89,6 @@ var Engine = (function(global) {
 
 
     function reset() {
-        // noop
     }
 
     Resources.load([

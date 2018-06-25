@@ -97,7 +97,7 @@ class Reward extends Entity {
   constructor() {
     super();
     this.sprite += 'Heart.png';                                                 // WORKS - heart is shown  // TODO: fix z-index so ALL is over heart.
-    this.x = 2;
+    this.x = 2;                                                                 // TODO: add life for touch (  updateLifeCounter()  ) and disappear.
     this.y = 1;
 
   }

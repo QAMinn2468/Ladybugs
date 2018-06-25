@@ -16,9 +16,14 @@ function updateLifeCounter(Life) {                                              
 }
 
 function lostAlert() {                                                          // WORKS function is called.
-  console.log('You Lost!');
-  alert('You Lost!');
+  alert('You Lost!');                                                           // WORKS game stops while alert is up.  // TODO: clearing alert, restarts game.  init()
 }
+
+function wonAlert() {
+  alert('YOU WON!');                                                            // WORKS  - // TODO:  called a bit early, game keeps playing and trying to alert., needs reset.
+}
+
+
 
 
 document.addEventListener('keyup', function(e) {
