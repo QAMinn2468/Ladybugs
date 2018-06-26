@@ -26,7 +26,6 @@ var Engine = (function(global) {
     }
 
     function update(dt) {
-
         updateEntities(dt);
         checkCollisions();
 
@@ -41,6 +40,11 @@ var Engine = (function(global) {
           player.y = 5;
         }
       })
+      if (player.checkCollisions(heart)) {
+        life = life + 1;
+        updateLifeCounter();                                                    // life increases by 1.
+        heart.x = -1;                                                           // heart disappears.
+      }
     }
 
     function updateEntities(dt) {
@@ -72,20 +76,19 @@ var Engine = (function(global) {
             }
         }
         renderEntities();
+        if ((player.y === 0) && (winNow === false)) {
+          console.log('win?');
+          wonAlert();
+        }
     }
 
     function renderEntities() {
         allEnemies.forEach(function(enemy) {
             enemy.render();                                                     // WORKS! - Ladybugs shown on screen
         });
-
         player.render();                                                        // WORKS! - player shows on screen
         heart.render();
-        console.log(winNow);
-        if ((player.y === 0) && (winNow === false)) {
-          console.log('win?');
-          wonAlert();
-        }
+
     }
 
 
