@@ -1,3 +1,7 @@
+/*******************************************************************************
+                        ENTITY OBJECT
+*******************************************************************************/
+
 class Entity {
   constructor() {
     this.sprite = 'images/';
@@ -25,6 +29,10 @@ class Entity {
   }
 };
 
+/*******************************************************************************
+                        PLAYER OBJECT
+*******************************************************************************/
+
 class Player extends Entity {
   constructor() {
     super();
@@ -48,11 +56,11 @@ class Player extends Entity {
           break;
       }
     }
-    // this.moving = true;
-
-    // checkWin();
-
 }
+
+/*******************************************************************************
+                        ENEMY OBJECT
+*******************************************************************************/
 
 class Enemy extends Entity {
   constructor(x,y) {
@@ -93,15 +101,17 @@ class Enemy extends Entity {
   }
 }
 
+/*******************************************************************************
+                        REWARD OBJECT
+*******************************************************************************/
+
 class Reward extends Entity {
   constructor() {
     super();
-    this.sprite += 'Heart.png';                                                 // WORKS - heart is shown  // TODO: fix z-index so ALL is over heart.
-    this.x = 2;                                                                 // TODO: add life for touch (  updateLifeCounter()  ) and disappear.
+    this.sprite += 'Heart.png';                                                 // WORKS - heart is shown  // TODO: fix z-index so bug is over heart.
+    this.x = 2;                                                                 // Fixed! life for touch and disappear.
     this.y = 1;
-
   }
-
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);
   }
