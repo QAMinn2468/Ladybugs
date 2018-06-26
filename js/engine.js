@@ -5,6 +5,7 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
     life = 3;                                                                   // WORKS!  life starts at 3.
+    const level = 1;                         // TODO: increase levels, and add gems
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);

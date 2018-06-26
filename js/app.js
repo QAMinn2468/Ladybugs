@@ -17,12 +17,14 @@ function updateLifeCounter(Life) {                                              
 
 function lostAlert() {                                                          // WORKS function is called.
   alert('You Lost!');                                                           // WORKS game stops while alert is up.  // TODO: clearing alert, restarts game.  init()
+  lives = 3;
+  main();
+  updateLifeCounter();
 }
 
 function wonAlert() {
   alert('YOU WON!');                                                            // WORKS  - // TODO:  called a bit early, game keeps playing and trying to alert., needs reset.
 }
-
 
 
 
