@@ -7,6 +7,9 @@ const lifeCounter = document.querySelector('.stars');
 const heart = new Reward();
 let life;
 const scoreboard = document.querySelector('.scoreboard');
+// let level = 1;                         // TODO: increase levels, and add gems
+// let move = true;
+let winNow = false;
 
 function updateLifeCounter(Life) {                                              // WORKS
   lifeCounter.innerText = `${life}`;
@@ -17,13 +20,14 @@ function updateLifeCounter(Life) {                                              
 
 function lostAlert() {                                                          // WORKS function is called.
   alert('You Lost!');                                                           // WORKS game stops while alert is up.  // TODO: clearing alert, restarts game.  init()
-  lives = 3;
   main();
-  updateLifeCounter();
 }
 
 function wonAlert() {
+  winNow = true;
+  // move = false;
   alert('YOU WON!');                                                            // WORKS  - // TODO:  called a bit early, game keeps playing and trying to alert., needs reset.
+  main();
 }
 
 

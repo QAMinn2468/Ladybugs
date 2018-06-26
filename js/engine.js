@@ -4,8 +4,8 @@ var Engine = (function(global) {
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
         lastTime;
+
     life = 3;                                                                   // WORKS!  life starts at 3.
-    const level = 1;                         // TODO: increase levels, and add gems
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
@@ -26,11 +26,10 @@ var Engine = (function(global) {
     }
 
     function update(dt) {
-      if (player.y === 0) {
-        checkWin();
-      }
+
         updateEntities(dt);
         checkCollisions();
+
   }                                                                             // WORKS Collision!!
 
     function checkCollisions() {
@@ -44,16 +43,12 @@ var Engine = (function(global) {
       })
     }
 
-    function checkWin() {
-        wonAlert();
-    }
-
-
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {                                    // WORKS - Ladybugs move
             enemy.update(dt);
         });
         player.update();
+        winNow = false;
     }
 
     function render() {
@@ -86,6 +81,11 @@ var Engine = (function(global) {
 
         player.render();                                                        // WORKS! - player shows on screen
         heart.render();
+        console.log(winNow);
+        if ((player.y === 0) && (winNow === false)) {
+          console.log('win?');
+          wonAlert();
+        }
     }
 
 
