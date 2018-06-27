@@ -12,12 +12,7 @@ Make it through the Ladybugs and to the safety of the water on the other side!
 
 # Controls
 
-### Arrow Keys
-
-Left Arrow: move Left
-Right Arrow: move Right
-Down Arrow: move Down
-Up Arrow: move Up
+-Use the Arrow Keys for movement.
 
 ## Notes
 
