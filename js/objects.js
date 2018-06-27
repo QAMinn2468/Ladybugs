@@ -96,7 +96,7 @@ class Enemy extends Entity {
     if(this.isOutOfBoundsX){
       this.x = -1;                                                              // WORKS - wraps ladybugs around to other side.
     } else {
-      this.x += dt;
+      this.x += 1.5 * dt;
     }
   }
 }

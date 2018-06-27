@@ -48,7 +48,7 @@ var Engine = (function(global) {
     }
 
     function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {                                    // WORKS - Ladybugs move
+        allEnemies.forEach(function(enemy) {                                    // WORKS - Ladybugs move FAST!
             enemy.update(dt*2.5);
         });
         player.update();
