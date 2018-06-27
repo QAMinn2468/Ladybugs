@@ -1,25 +1,25 @@
-#Ladybugs - the arcade game!#
+# Ladybugs - the arcade game!
 ===============================
 
-Find the game at XXXXXXXXXXXXXXXXXXX   URL.                                     <----add URL (after passes review)
+Find the game at XXXXXXXXXXXXXXXXXXX   URL.                                     
 
-#Goal#
+# Goal
 ===============================
 
 Make it through the Ladybugs and to the safety of the water on the other side!
 
 
-#Controls#
+# Controls
 ===============================
 
-##Arrow Keys##
+## Arrow Keys
 -------------------------------
 Left Arrow: move Left
 Right Arrow: move Right
 Down Arrow: move Down
 Up Arrow: move Up
 
-##Notes##
+## Notes
 -------------------------------
 
 -Heart - +1 life
@@ -28,7 +28,8 @@ Up Arrow: move Up
 -The game will end when all lives are lost.
 
 
-##Credits##
+## Credits
+This game was coded by Kimberly M. McCaffrey - June 2018.
 Slack @Rodrick[FEND] made an excellent video, which I watched live.
 In addition I was inspired by a fellow GwG FEND student's GREEN ladybugs (name unknown), and modified my ladybugs and Player
 as a result using Paint 3D.
