@@ -2,6 +2,7 @@
                         ENTITY OBJECT
 *******************************************************************************/
 
+
 class Entity {
   constructor() {
     this.sprite = 'images/';
@@ -20,7 +21,7 @@ class Entity {
 
   checkCollisions(playerOrEnemy) {
     if (this.y === playerOrEnemy.y) {
-      if (this.x >= playerOrEnemy.x - 0.5 && this.x <= (playerOrEnemy.x + 0.5)) {  // WORKS fine.   Collision!!
+      if (this.x >= playerOrEnemy.x - 1 && this.x <= (playerOrEnemy.x + 1)) {  // WORKS fine.   Collision!!
         return true;
       } else {
         return false;
