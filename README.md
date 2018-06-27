@@ -16,7 +16,7 @@ Use the Arrow Keys for movement.
 
 ## Notes
 
-Heart - +1 life
+Heart: +1 life
 
 Colliding with a Ladybug will lose a life.
 The game will end when all lives are lost.
