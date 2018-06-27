@@ -12,7 +12,11 @@ Make it through the Ladybugs and to the safety of the water on the other side!
 
 # Controls
 
-Use the Arrow Keys for movement.
+Use the Arrow Keys for movement OR use the following:
+UP: W
+DOWN: SPACE BAR
+LEFT: A
+RIGHT: D
 
 ## Notes
 
@@ -25,7 +29,7 @@ The game will end when all lives are lost.
 ## Credits
 
 Slack @Rodrick[FEND] made an excellent video, which I used as a base.
-In addition I was inspired by a fellow GwG FEND student's GREEN ladybugs (name unknown), and modified my ladybugs and Player
+In addition I was inspired by a fellow GwG Udacity FEND student's GREEN ladybugs (name unknown), and modified my ladybugs and Player
 as a result using Paint 3D.
 https://yoursammich.github.io/classic-arcade-game/ - is my favorite version to date, and inspired me to push and create the heart
 to gain 1 life.

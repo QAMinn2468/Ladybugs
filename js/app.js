@@ -2,7 +2,7 @@
                        MY CODE
 *******************************************************************************/
 const player = new Player();
-const allEnemies = [...Array(4)].map((_, i)=> new Enemy(0, i+1));               // adjusts number of ladybugs
+const allEnemies = [...Array(4)].map((_, i)=> new Enemy(i-1, i+1));               // adjusts number of ladybugs
 const lifeCounter = document.querySelector('.stars');
 const heart = new Reward();
 let life;
@@ -35,7 +35,7 @@ function wonAlert() {
 }
 
 function stop() {
-  document.location.href = "";                                                  // WORKS!!  
+  document.location.href = "";                                                  // WORKS!!
 }
 
 document.addEventListener('keyup', function(e) {
@@ -43,7 +43,11 @@ document.addEventListener('keyup', function(e) {
         37: 'left',
         38: 'up',
         39: 'right',
-        40: 'down'
+        40: 'down',
+        32: 'down',
+        65: 'left',
+        68: 'right',
+        87: 'up',                                                               // WORKS - Additional keycodes work!
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
