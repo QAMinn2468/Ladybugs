@@ -110,8 +110,8 @@ class Reward extends Entity {
   constructor() {
     super();
     this.sprite += 'Heart.png';                                                 // WORKS - heart is shown  // TODO: fix z-index so bug is over heart.
-    this.x = 2;                                                                 // Fixed! life for touch and disappear.
-    this.y = 1;
+    this.x = 3;                                                                 // Fixed! life for touch and disappear.
+    this.y = 3;
   }
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 75);

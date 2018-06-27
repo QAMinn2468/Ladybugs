@@ -23,18 +23,20 @@ function updateLifeCounter(Life) {                                              
 }
 
 function lostAlert() {                                                          // WORKS function is called.
-  alert('You Lost!');                                                           // WORKS game stops.
-  main();
+  alert('You Lost!');                                                           // WORKS game stops and REFRESHES!
+  stop();
 }
 
 function wonAlert() {
   winNow = true;
-  // move = false;
   alert('YOU WON!');                                                            // WORKS shown once and game is ended. // TODO: shown before enters water, then player enters water.
-  main();
+  player.y = 5;
+  stop();
 }
 
-
+function stop() {
+  document.location.href = "";                                                  // WORKS!!  
+}
 
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
