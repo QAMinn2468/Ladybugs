@@ -19,7 +19,7 @@ var Engine = (function(global) {
         win.requestAnimationFrame(main);
     }
 
-    function init() {
+    function init() {                                   // TODO:  fix this.
         reset();
         lastTime = Date.now();
         main();
@@ -49,7 +49,7 @@ var Engine = (function(global) {
 
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {                                    // WORKS - Ladybugs move
-            enemy.update(dt);
+            enemy.update(dt*2.5);
         });
         player.update();
         winNow = false;
@@ -76,8 +76,7 @@ var Engine = (function(global) {
             }
         }
         renderEntities();
-        if ((player.y === 0) && (winNow === false)) {
-          console.log('win?');
+        if ((player.y === 0) && (winNow === false)) {                           // WORKS - single win alert,  // TODO: adjust so shows after player shown in water.
           wonAlert();
         }
     }
