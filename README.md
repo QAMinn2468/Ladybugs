@@ -12,14 +12,14 @@ Make it through the Ladybugs and to the safety of the water on the other side!
 
 # Controls
 
--Use the Arrow Keys for movement.
+Use the Arrow Keys for movement.
 
 ## Notes
 
--Heart - +1 life
+Heart - +1 life
 
--Colliding with a Ladybug will lose a life.
--The game will end when all lives are lost.
+Colliding with a Ladybug will lose a life.
+The game will end when all lives are lost.
 
 
 ## Credits
