@@ -1,7 +1,9 @@
 # Ladybugs - the arcade game!
 ===============================
 
-Find the game at XXXXXXXXXXXXXXXXXXX   URL.                                     
+Find the game at https://github.com/QAMinn2468/Ladybugs.   
+Download a copy for yourself, open Chrome (or your favorite browser), use CTRL-O to open the file index.html, the game will
+load and be ready to play.                                 
 
 # Goal
 ===============================
@@ -12,7 +14,7 @@ Make it through the Ladybugs and to the safety of the water on the other side!
 # Controls
 ===============================
 
-## Arrow Keys
+### Arrow Keys
 -------------------------------
 Left Arrow: move Left
 Right Arrow: move Right
