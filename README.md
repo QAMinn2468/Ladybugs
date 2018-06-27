@@ -6,7 +6,7 @@ Find the game at XXXXXXXXXXXXXXXXXXX   URL.                                     
 #Goal#
 ===============================
 
-Make it through the Ladybugs and to the safety of the grass on the other side!
+Make it through the Ladybugs and to the safety of the water on the other side!
 
 
 #Controls#
@@ -24,6 +24,13 @@ Up Arrow: move Up
 
 -Heart - +1 life
 
-
 -Colliding with a Ladybug will lose a life.
--The game ends when all lives are lost.
+-The game will end when all lives are lost.
+
+
+##Credits##
+Slack @Rodrick[FEND] made an excellent video, which I watched live.
+In addition I was inspired by a fellow GwG FEND student's GREEN ladybugs (name unknown), and modified my ladybugs and Player
+as a result using Paint 3D.
+https://yoursammich.github.io/classic-arcade-game/ - is my favorite version to date, and inspired me to push and create the heart
+to gain 1 life.

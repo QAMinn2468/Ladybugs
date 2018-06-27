@@ -83,7 +83,7 @@ class Enemy extends Entity {
     //       break;
     //
     //     case 4:
-    //       this.x += 1.25;
+    //       this.x += dt;
     //       break;
     //
     //     default:
