@@ -1,7 +1,7 @@
 # Ladybugs - the arcade game!
 #### Designed by Kimberly M. McCaffrey - June 2018
 
-Find the game at https://github.com/QAMinn2468/Ladybugs.  
+Find the game at https://qaminn2468.github.io/Ladybugs/.  
 
 Download a copy for yourself, open Chrome (or your favorite browser), use CTRL-O to open the file index.html, the game will
 load and be ready to play.                                 
